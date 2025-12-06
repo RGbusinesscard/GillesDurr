@@ -26,11 +26,10 @@
     }
 
     .card {
-      position: relative;
       width: 360px;
       max-width: 92vw;
       border-radius: 28px;
-      padding: 26px 20px 22px;
+      padding: 26px 20px;
       background: linear-gradient(155deg, #0a0f1b 0%, #121929 40%, #0b0f18 100%);
       border: 1.5px solid rgba(255, 0, 76, 0.7);
       box-shadow:
@@ -62,7 +61,7 @@
       border-radius: 18px;
     }
 
-    /* Texte identité */
+    /* Identité */
     .identity {
       text-align: center;
       line-height: 1.35;
@@ -106,50 +105,29 @@
       font-size: 1.35rem;
       cursor: pointer;
       text-decoration: none;
-      background: radial-gradient(circle at 30% 20%, #ff6b6b, #e30613 60%, #6b001b 100%);
       color: #fff;
-      box-shadow:
-        0 0 10px rgba(227, 6, 19, 0.7),
-        0 12px 25px rgba(0, 0, 0, 0.8);
       transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
     }
 
-    .action-btn.secondary {
-      background: radial-gradient(circle at 30% 20%, #4f8dff, #0059ff 65%, #002058 100%);
+    .action-btn.phone {
+      background: radial-gradient(circle at 30% 20%, #ff6b6b, #e30613 60%, #6b001b 100%);
+      box-shadow: 0 0 10px rgba(227, 6, 19, 0.7), 0 12px 25px rgba(0, 0, 0, 0.8);
     }
 
-    .action-btn.tertiary {
+    .action-btn.mail {
+      background: radial-gradient(circle at 30% 20%, #4f8dff, #0059ff 65%, #002058 100%);
+      box-shadow: 0 0 10px rgba(0, 89, 255, 0.7), 0 12px 25px rgba(0, 0, 0, 0.8);
+    }
+
+    .action-btn.web {
       background: radial-gradient(circle at 30% 20%, #27c2a8, #1a9f83 65%, #046456 100%);
+      box-shadow: 0 0 10px rgba(26, 159, 131, 0.7), 0 12px 25px rgba(0, 0, 0, 0.8);
     }
 
     .action-btn:active {
       transform: translateY(2px) scale(0.97);
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.9);
       filter: brightness(0.92);
-    }
-
-    /* Bloc contact texte */
-    .contact-block {
-      font-size: 0.9rem;
-      background: rgba(9, 14, 26, 0.9);
-      border-radius: 18px;
-      padding: 12px 14px;
-      border: 1px solid rgba(255, 255, 255, 0.04);
-      color: #d6e0ff;
-    }
-
-    .contact-line {
-      margin: 2px 0;
-    }
-
-    .contact-block a {
-      color: #7fb7ff;
-      text-decoration: none;
-      word-break: break-all;
-    }
-
-    .contact-block a:hover {
-      text-decoration: underline;
     }
 
     /* Localisation */
@@ -159,6 +137,7 @@
       text-transform: uppercase;
       color: #9aa6c8;
       margin-bottom: 6px;
+      text-align: left;
     }
 
     .map-wrapper {
@@ -185,12 +164,13 @@
   </style>
 </head>
 <body>
+
   <div class="card-wrapper">
     <div class="card">
+
       <!-- Logo -->
       <div class="logo-box">
-        <!-- Mets ici ton fichier logo (renomme-le si besoin) -->
-        <img src="mailhes-pottier-logo.png" alt="Mailhès Pottier" />
+        <img src="IMG_7678.jpg" alt="Mailhès Pottier" />
       </div>
 
       <!-- Identité -->
@@ -200,53 +180,30 @@
         <div class="role">Conducteur de travaux</div>
       </div>
 
-      <!-- Boutons d’action -->
+      <!-- Boutons -->
       <div class="actions">
-        <a class="action-btn" href="tel:0672450119" aria-label="Appeler">
-          📞
-        </a>
-        <a class="action-btn secondary" href="mailto:gdurr@mailhes-pottier.fr" aria-label="Envoyer un e-mail">
-          ✉️
-        </a>
-        <a class="action-btn tertiary" href="https://www.mailhes-pottier.com" target="_blank" rel="noopener" aria-label="Visiter le site">
-          🌐
-        </a>
+        <a class="action-btn phone" href="tel:0672450119" aria-label="Appeler">📞</a>
+        <a class="action-btn mail" href="mailto:gdurr@mailhes-pottier.fr" aria-label="Mail">✉️</a>
+        <a class="action-btn web" href="https://www.mailhes-pottier.com" target="_blank" aria-label="Site web">🌐</a>
       </div>
 
-      <!-- Coordonnées détaillées -->
-      <div class="contact-block">
-        <div class="section-title">Coordonnées</div>
-        <p class="contact-line"><strong>Téléphone :</strong>
-          <a href="tel:0672450119">06 72 45 01 19</a>
-        </p>
-        <p class="contact-line"><strong>E-mail :</strong>
-          <a href="mailto:gdurr@mailhes-pottier.fr">gdurr@mailhes-pottier.fr</a>
-        </p>
-        <p class="contact-line"><strong>Site web :</strong>
-          <a href="https://www.mailhes-pottier.com" target="_blank" rel="noopener">
-            www.mailhes-pottier.com
-          </a>
-        </p>
-      </div>
-
-      <!-- Localisation -->
+      <!-- Carte Google Maps -->
       <div>
         <div class="section-title">Localisation</div>
         <div class="map-wrapper">
-          <!-- Tu peux remplacer l’URL par un embed Google Maps plus précis si tu as l’adresse exacte -->
-          <iframe
-            src="https://www.google.com/maps?q=Mailhes%20Pottier&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+          <iframe 
+            src="https://www.google.com/maps?q=Mailhes%20Pottier&output=embed" 
+            loading="lazy">
           </iframe>
         </div>
       </div>
 
-      <!-- Bas de carte -->
       <div class="footer-text">
         Carte de visite dématérialisée – Mailhès Pottier
       </div>
+
     </div>
   </div>
+
 </body>
 </html>
