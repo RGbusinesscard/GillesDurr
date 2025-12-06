@@ -31,7 +31,7 @@
       border-radius: 28px;
       padding: 26px 20px;
       background: linear-gradient(155deg, #071020 0%, #10192b 40%, #060b16 100%);
-      border: 1.5px solid rgba(227, 6, 19, 0.85); /* rouge logo */
+      border: 1.5px solid rgba(227, 6, 19, 0.85);
       box-shadow:
         0 0 30px rgba(227, 6, 19, 0.45),
         0 25px 60px rgba(0, 0, 0, 0.8);
@@ -109,17 +109,19 @@
       transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
     }
 
+    /* 🎨 BLEU MAILHES (clair) */
     .action-btn.phone {
-      background: radial-gradient(circle at 30% 20%, #ff6b6b, #e30613 60%, #7b001f 100%);
+      background: radial-gradient(circle at 30% 20%, #8bbdff, #6ba7ff 60%, #3c7ed6 100%);
       box-shadow:
-        0 0 10px rgba(227, 6, 19, 0.7),
+        0 0 10px rgba(107, 167, 255, 0.7),
         0 12px 25px rgba(0, 0, 0, 0.8);
     }
 
+    /* 🎨 BLEU POTTIER (foncé) */
     .action-btn.mail {
-      background: radial-gradient(circle at 30% 20%, #6ba7ff, #0059ff 65%, #003076 100%);
+      background: radial-gradient(circle at 30% 20%, #0053c3, #003b88 65%, #001f4c 100%);
       box-shadow:
-        0 0 10px rgba(0, 89, 255, 0.7),
+        0 0 10px rgba(0, 59, 136, 0.7),
         0 12px 25px rgba(0, 0, 0, 0.8);
     }
 
@@ -143,7 +145,7 @@
       margin-top: 2px;
       border-radius: 18px;
       overflow: hidden;
-      border: 1px solid rgba(0, 89, 255, 0.4); /* bleu logo */
+      border: 1px solid rgba(0, 59, 136, 0.4);
       box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
     }
 
@@ -162,8 +164,8 @@
     }
   </style>
 </head>
-<body>
 
+<body>
   <div class="card-wrapper">
     <div class="card">
 
@@ -179,24 +181,17 @@
         <div class="role">Conducteur de travaux</div>
       </div>
 
-      <!-- Boutons (rouge + bleu, plus de vert) -->
+      <!-- Boutons avec les DEUX bleus du logo -->
       <div class="actions">
-        <a class="action-btn phone" href="tel:0672450119" aria-label="Appeler">
-          📞
-        </a>
-        <a class="action-btn mail" href="mailto:gdurr@mailhes-pottier.fr" aria-label="Envoyer un e-mail">
-          ✉️
-        </a>
+        <a class="action-btn phone" href="tel:0672450119">📞</a>
+        <a class="action-btn mail" href="mailto:gdurr@mailhes-pottier.fr">✉️</a>
       </div>
 
-      <!-- Carte Google Maps -->
+      <!-- Map -->
       <div>
         <div class="section-title">Localisation</div>
         <div class="map-wrapper">
-          <iframe
-            src="https://www.google.com/maps?q=Mailhes%20Pottier&output=embed"
-            loading="lazy">
-          </iframe>
+          <iframe src="https://www.google.com/maps?q=Mailhes%20Pottier&output=embed" loading="lazy"></iframe>
         </div>
       </div>
 
@@ -206,6 +201,5 @@
 
     </div>
   </div>
-
 </body>
 </html>
